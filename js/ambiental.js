@@ -161,7 +161,8 @@ function updateReadout(pos, env) {
     const showAll = document.getElementById('toggle-show-all').checked;
     const isTemp = document.getElementById('toggle-temp').checked;
     const isPress = document.getElementById('toggle-pressure').checked;
-    const isWind = document.getElementById('toggle-wind').checked || document.getElementById('toggle-wind-animated').checked;
+    const isWind = (document.getElementById('toggle-wind')?.checked ?? false)
+        || document.getElementById('toggle-wind-animated').checked;
     const isGeopot = document.getElementById('toggle-geopotential').checked;
     const isDust = document.getElementById('toggle-dust').checked;
     
@@ -744,32 +745,9 @@ export async function initAmbientalModule(map) {
         if (lastCursor) updateReadout(lastCursor, getEnvAtPosition(lastCursor.lat, lastCursor.lng));
     });
 
-    // ─── Capa de Viento (Estática vs Animada) ───
-    document.getElementById('toggle-wind').addEventListener('change', e => {
-        if (map.getLayer('env-wind')) {
-            map.setLayoutProperty('env-wind', 'visibility', e.target.checked ? 'visible' : 'none');
-        }
-        if (e.target.checked) {
-            // Apagar la animación si estaba encendida
-            const animCb = document.getElementById('toggle-wind-animated');
-            if (animCb.checked) {
-                animCb.checked = false;
-                if (particleSystem) particleSystem.stop();
-            }
-        }
-        if (lastCursor) updateReadout(lastCursor, getEnvAtPosition(lastCursor.lat, lastCursor.lng));
-    });
-
+    // ─── Animación de Viento ───
     document.getElementById('toggle-wind-animated').addEventListener('change', e => {
         if (e.target.checked) {
-            // Apagar las flechas estáticas si estaban encendidas
-            const staticCb = document.getElementById('toggle-wind');
-            if (staticCb.checked) {
-                staticCb.checked = false;
-                if (map.getLayer('env-wind')) {
-                    map.setLayoutProperty('env-wind', 'visibility', 'none');
-                }
-            }
             if (particleSystem) particleSystem.start();
         } else {
             if (particleSystem) particleSystem.stop();
