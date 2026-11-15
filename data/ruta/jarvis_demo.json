@@ -1,0 +1,106 @@
+{
+  "_nota": "Guion del modo voz de demo de Jarvis (js/ruta/panorama.js, ?demo). Respuestas preparadas, tomadas solo de la ficha verificada por Ciencia en panoramas.json (#15); las cifras del traje y del cuerpo NO van aquí: se leen en vivo de marswalk.traje() y marswalk.cuerpo(). Si se graba audio original, poned la ruta en 'audio' (mp3/ogg en data/ruta/jarvis/) y se reproduce en lugar de la voz sintética.",
+  "etiqueta": {
+    "es": "Demo guiada · respuesta preparada · cifras modeladas",
+    "en": "Guided demo · prepared answer · modelled figures"
+  },
+  "despertar": {
+    "es": "¿Sí? Te escucho.",
+    "en": "Yes? I'm listening."
+  },
+  "atajos": {
+    "j": {
+      "es": "Hey Jarvis, ¿qué roca es esta?",
+      "en": "Hey Jarvis, what is this rock?"
+    },
+    "1": {
+      "es": "Hey Jarvis, ¿qué roca es esta?",
+      "en": "Hey Jarvis, what is this rock?"
+    },
+    "2": {
+      "es": "Hey Jarvis, ¿cuánto oxígeno me queda?",
+      "en": "Hey Jarvis, how much oxygen do I have left?"
+    },
+    "3": {
+      "es": "Hey Jarvis, ¿puedo hacer esta ruta?",
+      "en": "Hey Jarvis, can I do this route?"
+    },
+    "4": {
+      "es": "Hey Jarvis, ¿por qué importa esta roca?",
+      "en": "Hey Jarvis, why does this rock matter?"
+    },
+    "5": {
+      "es": "Hey Jarvis, ¿qué tiene de especial esta roca?",
+      "en": "Hey Jarvis, what does this rock have in special?"
+    },
+    "6": {
+      "es": "Hey Jarvis, ¿estas moléculas son prueba de vida?",
+      "en": "Hey Jarvis, are these molecules proof of life?"
+    },
+    "7": {
+      "es": "Hey Jarvis, ¿qué muestras se recogieron aquí?",
+      "en": "Hey Jarvis, what samples were collected here?"
+    }
+  },
+  "objetos": {
+    "roca-wildcat-ridge": {
+      "es": {
+        "nombre": "Wildcat Ridge",
+        "que": "Esta es Wildcat Ridge, una roca de aproximadamente un metro que probablemente se formó hace miles de millones de años, cuando lodo y arena fina se depositaron en un lago salado que se evaporaba. SHERLOC detectó aquí moléculas orgánicas asociadas a minerales de sulfato. Perseverance tomó dos testigos: Hazeltop y Bearwallow.",
+        "porque": "Wildcat Ridge importa porque tiene las detecciones orgánicas más abundantes de la misión hasta 2022, en un antiguo lago donde la vida podría haber prosperado. Ojo: las moléculas orgánicas no son prueba de vida.",
+        "especial": "Wildcat Ridge es excepcionalmente especial porque contiene la mayor concentración de moléculas orgánicas detectada por Perseverance hasta ese momento en Jezero. Están asociadas espacialmente a sulfatos en lutitas depositadas en un antiguo lago salado, lo que la convierte en el entorno ideal para preservar biofirmas del pasado marciano.",
+        "vida": "Importante: las moléculas orgánicas contienen carbono e hidrógeno y son fundamentales para la química biológica, pero también pueden formarse por reacciones químicas puramente abióticas. No son prueba definitiva de vida pasada, sino biofirmas potenciales prioritarias para su retorno a la Tierra.",
+        "muestras": "Perseverance tomó dos testigos de roca sellados en titanio: Hazeltop en el sol 509 y Bearwallow en el sol 516. Además, raspó el parche de abrasión Berry Hollow para que PIXL y SHERLOC analizaran su química interna.",
+        "minerales": "Contiene minerales de sulfato (sales evaporíticas como yeso), lutita de grano muy fino (silicatos y arcillas) y arena fina depositada en una ensenada tranquila del lago del cráter Jezero.",
+        "audio": null
+      },
+      "en": {
+        "nombre": "Wildcat Ridge",
+        "que": "This is Wildcat Ridge, a rock about one meter wide that likely formed billions of years ago as mud and fine sand settled in an evaporating saltwater lake. SHERLOC detected organic molecules here, spatially linked to sulfate minerals. Perseverance drilled two cores from it: Hazeltop and Bearwallow.",
+        "porque": "Wildcat Ridge matters because it holds the mission's most abundant organic detections as of 2022, in an ancient lake where life could have thrived. Keep in mind: organic molecules are not proof of life.",
+        "especial": "Wildcat Ridge is exceptionally special because it holds the highest concentration of organic molecules detected by Perseverance in Jezero up to that point. They are spatially correlated with sulfate minerals in mudstones deposited in an evaporating saltwater lake, creating the ideal preservation environment for potential Martian biosignatures.",
+        "vida": "Caution: organic molecules contain carbon and hydrogen and are key building blocks of biology, but they can also form through abiotic geochemical reactions. They are not direct proof of ancient life, but prime potential biosignatures prioritized for laboratory analysis on Earth.",
+        "muestras": "Perseverance gathered two core samples sealed in titanium: Hazeltop on Sol 509 and Bearwallow on Sol 516. It also created the Berry Hollow abrasion patch for interior chemical mapping with PIXL and SHERLOC.",
+        "minerales": "It contains sulfate minerals (evaporite salts such as gypsum), very fine-grained mudstone (silicates and clays), and fine sand deposited in a calm bay of the ancient Jezero crater lake.",
+        "audio": null
+      }
+    },
+    "three-forks": {
+      "es": {
+        "nombre": "Depósito Three Forks",
+        "que": "Three Forks es el primer depósito de muestras de la humanidad en otro planeta. Perseverance depositó aquí 10 tubos sellados de titanio en el suelo al pie del delta como reserva estratégica para Mars Sample Return.",
+        "especial": "Su valor radica en ser el depósito de seguridad de la misión: si el rover quedara inoperativo, helicópteros de recuperación podrían recoger estos 10 tubos con muestras geológicas y biológicas clave de Jezero.",
+        "audio": null
+      },
+      "en": {
+        "nombre": "Three Forks Sample Depot",
+        "que": "Three Forks is humanity's first sample depot on another planet. Perseverance placed 10 sealed titanium tubes on the surface at the foot of the delta as a strategic cache for Mars Sample Return.",
+        "especial": "Its value lies in being the mission's safety cache: if the rover were disabled, recovery helicopters could retrieve these 10 tubes containing Jezero's geological and biological record.",
+        "audio": null
+      }
+    },
+    "rockytop": {
+      "es": {
+        "nombre": "Rockytop Scarp",
+        "que": "Rockytop es el frente escarpado del delta de Jezero. Sus estratos rocosos expuestos revelan cómo fluctuaron los ríos y el nivel del lago marciano hace miles de millones de años.",
+        "especial": "Es una ventana estratigráfica directa a la historia de Marte: permite estudiar la transición de un lago profundo a fases de evaporación sin necesidad de perforar el suelo.",
+        "audio": null
+      },
+      "en": {
+        "nombre": "Rockytop Scarp",
+        "que": "Rockytop is the stratified scarp of the Jezero delta fan. Its exposed sedimentary layers reveal how rivers and lake levels fluctuated billions of years ago.",
+        "especial": "It provides a direct stratigraphic window into Martian history: allowing scientists to study the shift from a deep lake to dry evaporite phases without drilling deep underground.",
+        "audio": null
+      }
+    }
+  },
+  "escena": {
+    "_nota": "Escena principal de la demo (botón «Preguntar a Jarvis», tecla J o espacio en la vista 360° de Wildcat Ridge). Respuesta ampliada el 15 nov con la ficha verificada de panoramas.json; audio nuevo (ElevenLabs) en data/ruta/jarvis/wildcat-ridge-es-v2.mp3; el texto de «respuesta» es su transcripción literal, sin las etiquetas de entonación. El audio anterior (wildcat-ridge-es.mp3, PR #24) se conserva. Las cifras del panel se leen en vivo del planificador.",
+    "es": {
+      "pregunta": "Jarvis, ¿qué es eso?",
+      "respuesta": "Jefe, eso es Wildcat Ridge, una roca formada en un antiguo lago salado. Aquí se encontró las moléculas orgánicas más abundantes. Eso sí: la planificación deja solo un seis por ciento de margen. Vuelve a la base ya. Por la segura.",
+      "audio": "data/ruta/jarvis/wildcat-ridge-es-v2.mp3",
+      "etiqueta": "Demo guiada · respuesta pregrabada · cifras modeladas"
+    }
+  }
+}

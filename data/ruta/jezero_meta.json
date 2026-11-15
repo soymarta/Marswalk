@@ -1,0 +1,160 @@
+{
+  "fuente": "USGS Mars 2020 TRN CTX DTM 20 m (JEZ_ctx_B_soc_008, areoide MOLA)",
+  "url": "https://planetarymaps.usgs.gov/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_DTM_MOLAtopography_DeltaGeoid_20m_Eqc_latTs0_lon0.tif",
+  "radio_m": 3396190.0,
+  "ancho": 1596,
+  "alto": 1512,
+  "lon0": 77.16046545922367,
+  "lat0": 18.721194481872804,
+  "dlon": 0.0003374120971623044,
+  "dlat": 0.0003374120971623044,
+  "res_m": 20.0,
+  "elev_min": -2710.69580078125,
+  "elev_max": -1515.53955078125,
+  "codificacion": "png RGB: elev_m = (R*256+G)/10 - 3000; fila 0 = norte",
+  "offset": 3000.0,
+  "teselas": {
+    "url": "tiles/jezero_dem/{z}/{x}/{y}.png",
+    "codificacion": "mapbox (-10000 + v*0.1)",
+    "zoom_min": 7,
+    "zoom_max": 13,
+    "rangos": {
+      "7": [
+        91,
+        57,
+        91,
+        57
+      ],
+      "8": [
+        182,
+        114,
+        183,
+        114
+      ],
+      "9": [
+        365,
+        228,
+        366,
+        229
+      ],
+      "10": [
+        731,
+        457,
+        733,
+        459
+      ],
+      "11": [
+        1462,
+        915,
+        1466,
+        918
+      ],
+      "12": [
+        2925,
+        1831,
+        2932,
+        1837
+      ],
+      "13": [
+        5851,
+        3662,
+        5864,
+        3674
+      ]
+    },
+    "bounds": [
+      77.16046545922367,
+      18.211027390963398,
+      77.69897516629472,
+      18.721194481872804
+    ]
+  },
+  "orto": {
+    "fuente": "USGS Mars 2020 TRN CTX orthoMosaic 6 m (JEZ_ctx_B_soc_008), tinte marciano sobre escala de grises",
+    "url": "tiles/jezero_orto/{z}/{x}/{y}.webp",
+    "zoom_min": 7,
+    "zoom_max": 14,
+    "bounds": [
+      77.16046545922367,
+      18.211027390963398,
+      77.699177613553,
+      18.721194481872804
+    ],
+    "rangos": {
+      "7": [
+        91,
+        57,
+        91,
+        57
+      ],
+      "8": [
+        182,
+        114,
+        183,
+        114
+      ],
+      "9": [
+        365,
+        228,
+        366,
+        229
+      ],
+      "10": [
+        731,
+        457,
+        733,
+        459
+      ],
+      "11": [
+        1462,
+        915,
+        1466,
+        918
+      ],
+      "12": [
+        2925,
+        1831,
+        2932,
+        1837
+      ],
+      "13": [
+        5851,
+        3662,
+        5864,
+        3674
+      ],
+      "14": [
+        11703,
+        7324,
+        11728,
+        7348
+      ]
+    }
+  },
+  "capas": {
+    "pendiente": {
+      "url": "data/ruta/terreno_pendiente.png",
+      "offset": 0,
+      "escala": 1.0,
+      "fuente": "Módulo de terreno: pendiente.tif (grados (Horn 3×3))"
+    },
+    "rugosidad": {
+      "url": "data/ruta/terreno_rugosidad.png",
+      "offset": 0,
+      "escala": 0.1,
+      "fuente": "Módulo de terreno: rugosidad.tif (metros (σ residuo 5×5))"
+    },
+    "peligro": {
+      "url": "data/ruta/terreno_peligro.png",
+      "offset": 0,
+      "escala": 0.001,
+      "fuente": "Módulo de terreno: peligro.tif (fracción 0-1 (1 = prohibido))"
+    },
+    "confianza": {
+      "url": "data/ruta/terreno_confianza.png",
+      "offset": 0,
+      "escala": 0.001,
+      "fuente": "Módulo de terreno: confianza.tif (fracción 0-1 (1 = HiRISE 1 m))"
+    }
+  }
+}

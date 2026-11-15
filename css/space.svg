@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <linearGradient id="space" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#02040b"/>
+      <stop offset=".52" stop-color="#080c20"/>
+      <stop offset="1" stop-color="#03040b"/>
+    </linearGradient>
+    <radialGradient id="blue-nebula">
+      <stop stop-color="#647de0" stop-opacity=".42"/>
+      <stop offset=".42" stop-color="#3b4e9e" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#12152e" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="rose-nebula">
+      <stop stop-color="#c05c83" stop-opacity=".34"/>
+      <stop offset=".45" stop-color="#713969" stop-opacity=".17"/>
+      <stop offset="1" stop-color="#171126" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="teal-nebula">
+      <stop stop-color="#398da3" stop-opacity=".26"/>
+      <stop offset="1" stop-color="#101c2a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="star-glow" x="-2" y="-2" width="5" height="5">
+      <feGaussianBlur stdDeviation="2.5"/>
+    </filter>
+    <filter id="soft-glow" x="-.5" y="-.5" width="2" height="2">
+      <feGaussianBlur stdDeviation="55"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#space)"/>
+  <g filter="url(#soft-glow)">
+    <ellipse cx="520" cy="610" rx="720" ry="250" fill="url(#blue-nebula)" transform="rotate(-24 520 610)"/>
+    <ellipse cx="1200" cy="390" rx="620" ry="290" fill="url(#rose-nebula)" transform="rotate(-24 1200 390)"/>
+    <ellipse cx="930" cy="820" rx="560" ry="230" fill="url(#teal-nebula)" transform="rotate(-24 930 820)"/>
+  </g>
+  <path d="M-80 810C280 560 520 710 850 450S1330 280 1690 80" fill="none" stroke="#8590e0" stroke-opacity=".09" stroke-width="150" filter="url(#soft-glow)"/>
+  <g fill="#e7edff">
+  </g>
+  <g fill="#fff">
+  </g>
+  <g fill="#dce6ff">
+  </g>
+  <g fill="#fff" filter="url(#star-glow)" opacity=".42">
+  </g>
+</svg>

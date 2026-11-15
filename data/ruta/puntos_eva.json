@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "nota": "Las coordenadas son puntos de la trayectoria de Perseverance (NASA/JPL MMGIS M20), no centroides verificados de los afloramientos. El campo sol sirve para buscar imágenes cercanas y no indica necesariamente la fecha del muestreo o depósito. Valor científico y trabajoMin son elecciones provisionales del planificador, no medidas NASA.",
+  "campos": {
+    "id": "identificador único (texto, sin espacios)",
+    "nombre": "nombre mostrado",
+    "lon, lat": "grados, IAU Mars 2000 este/planetocéntrica",
+    "valor": "valor científico 1-10 (el optimizador maximiza la suma)",
+    "trabajoMin": "minutos de trabajo en la parada (muestreo, imágenes)",
+    "obligatoria": "true si la EVA debe incluirla siempre",
+    "que, porque, muestra, rover": "ficha científica (texto corto)",
+    "fuentes": "URLs primarias para comprobar la afirmación geológica o de misión",
+    "solesNasa": "fechas oficiales de NASA (muestras o depósito) con su fuente; sol es solo el sol de las fotos de la panorámica",
+    "precisionUbicacion": "estado del punto del mapa frente al sitio nombrado"
+  },
+  "habitat": {
+    "id": "base-alfa", "nombre": "Base Alfa (hábitat)",
+    "lon": 77.42449, "lat": 18.45649,
+    "porque": "Parche de 100 m más llano y liso entre el frente del delta y Séítah (pendiente máx. 0,6°, rugosidad 8 cm en el DTM CTX de 20 m), elegido automáticamente."
+  },
+  "paradas": [
+    {
+      "id": "three-forks", "nombre": "Depósito Three Forks", "lon": 77.40824, "lat": 18.45281, "sol": 670,
+      "valor": 9, "trabajoMin": 30, "obligatoria": false,
+      "que": "Zona Three Forks: Perseverance dejó un depósito de 10 tubos al pie del delta.",
+      "porque": "Permite explicar la recuperación futura de muestras y comparar acceso frente a valor científico.",
+      "muestra": "Fotografiar el terreno y documentar el acceso; manipular tubos solo con un plan de misión.",
+      "rover": "Los tubos se depositaron entre los soles 653 y 690; el sol 670 del marcador solo guía la búsqueda de imágenes.",
+      "precisionUbicacion": "Mirador aproximado de la zona del depósito: posición del rover en el sol 670 (site 32, drive 672, MMGIS), dentro de los soles del depósito. No es la ubicación exacta de un tubo.",
+      "solesNasa": { "desde": 653, "hasta": 690, "fuente": "https://science.nasa.gov/resource/perseverances-three-forks-sample-depot-map/" },
+      "fuentes": ["https://science.nasa.gov/resource/perseverances-three-forks-sample-depot-map/"]
+    },
+    {
+      "id": "wildcat-ridge", "nombre": "Wildcat Ridge", "lon": 77.40592, "lat": 18.45865, "sol": 501,
+      "valor": 9, "trabajoMin": 45, "obligatoria": false,
+      "que": "Roca sedimentaria del delta formada con lodo, arena fina y sales en un antiguo lago.",
+      "porque": "SHERLOC detectó moléculas orgánicas asociadas a sulfatos; no demuestra vida pasada.",
+      "muestra": "Fotografiar capas y textura; documentar el contexto de los testigos ya recogidos.",
+      "rover": "Perseverance selló Hazeltop (sol 509) y Bearwallow (sol 516); el sol 501 del marcador guía imágenes.",
+      "precisionUbicacion": "Mirador aproximado: posición del rover aparcado durante el muestreo (sol 502, site 26, drive 1222, MMGIS; sin trayectos entre los soles 503 y 519). No es el centro exacto de la roca. Las fotos de la panorámica son del sol 501, a 9 m.",
+      "solesNasa": { "muestras": [509, 516], "fuente": "https://science.nasa.gov/mission/mars-2020-perseverance/mars-rock-samples/" },
+      "fuentes": ["https://www.jpl.nasa.gov/news/nasas-perseverance-rover-investigates-geologically-rich-mars-terrain/", "https://science.nasa.gov/mission/mars-2020-perseverance/mars-rock-samples/"]
+    },
+    {
+      "id": "hawksbill-gap", "nombre": "Hawksbill Gap", "lon": 77.40885, "lat": 18.45731, "sol": 439,
+      "valor": 7, "trabajoMin": 30, "obligatoria": false,
+      "que": "Sector del escarpe del delta con capas de arena y sedimentos más gruesos expuestas.",
+      "porque": "Las capas ayudan a reconstruir cómo cambiaron los flujos hacia el antiguo lago de Jezero.",
+      "muestra": "Secuencia fotográfica de las capas; muestreo solo si el plan de misión lo prevé.",
+      "rover": "Perseverance investigó este sector durante la campaña del frente del delta.",
+      "precisionUbicacion": "Punto de trayectoria MMGIS del sol 439; sector amplio, no afloramiento exacto.",
+      "fuentes": ["https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2023JE008187", "https://ntrs.nasa.gov/citations/20230000582"]
+    },
+    {
+      "id": "seitah", "nombre": "Séítah", "lon": 77.44302, "lat": 18.43396, "sol": 248,
+      "valor": 8, "trabajoMin": 40, "obligatoria": false,
+      "que": "Cúmulo ígneo rico en olivino, en una zona con dunas y crestas.",
+      "porque": "Roca ígnea datable: clave para la cronología de Jezero y su alteración por agua.",
+      "muestra": "Testigo de roca olivínica fresca y de su superficie alterada.",
+      "rover": "PIXL midió cristales de olivino y carbonatos; muestras de 2021."
+    },
+    {
+      "id": "maaz", "nombre": "Máaz (Rochette)", "lon": 77.44069, "lat": 18.43255, "sol": 200,
+      "valor": 6, "trabajoMin": 30, "obligatoria": false,
+      "que": "Lavas basálticas del suelo del cráter, encima de Séítah.",
+      "porque": "Completa la historia volcánica del suelo y la interacción agua-roca.",
+      "muestra": "Testigo de basalto con vetas de sales.",
+      "rover": "Primera muestra de roca con éxito ('Rochette') en esta zona."
+    },
+    {
+      "id": "octavia", "nombre": "Aterrizaje Octavia E. Butler", "lon": 77.45089, "lat": 18.44463, "sol": 13,
+      "valor": 3, "trabajoMin": 15, "obligatoria": false,
+      "que": "Punto de aterrizaje de Perseverance (febrero de 2021).",
+      "porque": "Patrimonio de la exploración y estado del regolito tras la llegada.",
+      "muestra": "Fotografías de referencia y regolito superficial.",
+      "rover": "Lugar desde el que despegó Ingenuity en su primer vuelo."
+    },
+    {
+      "id": "belva", "nombre": "Cráter Belva", "lon": 77.36868, "lat": 18.48256, "sol": 793,
+      "valor": 7, "trabajoMin": 30, "obligatoria": false,
+      "que": "Cráter de impacto en la parte alta del delta que expone sus capas internas.",
+      "porque": "Ventana natural a la estructura interna del delta sin necesidad de perforar.",
+      "muestra": "Panorámica estratigráfica y muestra del borde.",
+      "rover": "Perseverance estudió Belva desde su borde en 2023."
+    }
+  ]
+}

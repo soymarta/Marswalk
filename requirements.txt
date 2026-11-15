@@ -1,0 +1,17 @@
+# requirements.txt
+# Dependencias Python del proyecto Mapa Topográfico de Marte
+#
+# ⚠️ IMPORTANTE: GDAL debe instalarse primero a nivel de sistema.
+#    Ver la guía de instalación más abajo.
+
+# Rasterio — interfaz Python para GDAL
+rasterio>=1.3.0
+rio-rgbify>=0.9.0
+
+# Dependencias para el procesamiento de datos climáticos (EMARS y MCD)
+xarray>=2023.1.0
+fsspec>=2023.1.0
+huggingface_hub>=0.20.0
+scipy>=1.10.0
+numpy>=1.24
+netCDF4>=1.6.0

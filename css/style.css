@@ -1,0 +1,126 @@
+html, body { width: 100%; height: 100%; overflow: hidden; }
+body { margin: 0; padding: 0; font-family: sans-serif; background: #02040b; }
+#space-background {
+    position: fixed;
+    inset: -70%;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0;
+    background: #02040b url('./space.svg') center / cover no-repeat;
+    transform: translate3d(0, 0, 0) scale(1.05);
+    transform-origin: center;
+    transition: opacity 400ms ease;
+    will-change: transform;
+}
+#space-background.visible { opacity: 1; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; z-index: 1; }
+
+.coords {
+    position: absolute; top: 10px; left: 10px;
+    background: rgba(0,0,0,0.82); color: white;
+    padding: 12px; border-radius: 5px;
+    font-family: monospace; 
+    font-size: 12px;
+    z-index: 3; pointer-events: auto;
+    line-height: 1.6;
+    min-width: 220px;
+}
+.coords-header {
+    font-weight: bold; font-size: 13px;
+    color: #ffcc88; margin-bottom: 6px;
+    display: flex; justify-content: space-between; align-items: center;
+    cursor: pointer; user-select: none;
+}
+.coords-content {
+    margin-top: 6px;
+}
+.coords.collapsed .coords-content {
+    display: none;
+}
+.coords .rd-row { line-height: 1.6; }
+.coords span { color: #ffddaa; }
+.coords .coords-header span { color: #ffcc88; }
+
+/* Por encima de la barra de escala de MapLibre (abajo a la izquierda), para que la escala se vea. */
+.info {
+    position: absolute; bottom: 46px; left: 10px;
+    background: rgba(0,0,0,0.75); color: white;
+    padding: 10px 15px; border-radius: 5px;
+    font-size: 12px; z-index: 1; pointer-events: none;
+}
+.legend {
+    position: absolute; bottom: 20px; right: 20px;
+    background: rgba(0,0,0,0.82); color: white;
+    padding: 12px; border-radius: 5px;
+    font-size: 11px; z-index: 1; pointer-events: none;
+    line-height: 1.6;
+    min-width: 130px;
+}
+.legend-title { 
+    font-weight: bold; margin-bottom: 8px; font-size: 13px;
+    color: #ffcc88;
+}
+.legend-item { 
+    display: flex; align-items: center; gap: 8px; margin-bottom: 3px; 
+}
+.legend-color {
+    width: 12px; height: 12px; border-radius: 2px;
+    display: inline-block; border: 1px solid rgba(255,255,255,0.3);
+}
+
+.controls {
+    position: absolute; 
+    top: 10px;
+    right: 55px;
+    background: rgba(0,0,0,0.82); color: white;
+    padding: 12px; border-radius: 5px;
+    font-size: 12px; z-index: 2;
+    width: 210px;
+}
+.controls-header {
+    font-weight: bold; font-size: 13px;
+    color: #ffcc88; margin-bottom: 6px;
+    display: flex; justify-content: space-between; align-items: center;
+    cursor: pointer; user-select: none;
+    letter-spacing: 1px;
+}
+.controls-content {
+    display: flex; flex-direction: column; gap: 6px;
+}
+.controls.collapsed .controls-content {
+    display: none;
+}
+.controls.collapsed .controls-header {
+    margin-bottom: 0;
+}
+.controls label {
+    display: flex; align-items: center; gap: 6px;
+    cursor: pointer; user-select: none;
+}
+.controls input[type="checkbox"] { cursor: pointer; }
+.controls .title {
+    font-weight: bold; margin-bottom: 4px; font-size: 13px;
+    color: #ffcc88;
+}
+/* Vista de globo: efecto de planeta (js/main.js, updateGlobeEffect). --r es el radio del globo en pantalla. */
+#globe-atmo, #globe-luz { position: absolute; left: 50%; top: 50%; border-radius: 50%; pointer-events: none; display: none; transform: translate(calc(-50% + var(--flota-x, 0px)), calc(-50% + var(--flota, 0px))); }
+/* Cámara flotando (js/main.js, flotarGlobo): el mapa y su halo se mecen juntos unos píxeles; las estrellas, menos. */
+#map { transform: translate3d(var(--flota-x, 0px), var(--flota, 0px), 0); }
+#space-fx { translate: calc(var(--flota-x, 0px) * .3) calc(var(--flota, 0px) * .3); }
+#globe-atmo.visible, #globe-luz.visible { display: block; }
+/* Atmósfera: por detrás del mapa (el globo la tapa), solo asoma el borde. Fina y polvorienta, más intensa hacia el Sol. */
+#globe-atmo { z-index: 0; width: calc(var(--r, 0px) * 2.44); height: calc(var(--r, 0px) * 2.44);
+    background:
+        radial-gradient(circle at 30% 26%, rgba(255, 196, 150, .55) 0, rgba(255, 196, 150, 0) 62%),
+        radial-gradient(closest-side, rgba(255, 170, 120, 0) 80.5%, rgba(255, 186, 140, .85) 82.2%, rgba(255, 150, 104, .38) 85%, rgba(226, 120, 96, .13) 91%, rgba(200, 110, 100, 0) 100%);
+    -webkit-mask-image: radial-gradient(closest-side, #000 80%, #000 86%, transparent 100%); mask-image: radial-gradient(closest-side, #000 80%, #000 86%, transparent 100%); }
+/* Luz: por delante del mapa. Brillo hacia el Sol (arriba a la izquierda), lado nocturno, limbo oscurecido y un filo claro. */
+#globe-luz { z-index: 1; width: calc(var(--r, 0px) * 2 + 2px); height: calc(var(--r, 0px) * 2 + 2px);
+    background:
+        radial-gradient(circle at 33% 29%, rgba(255, 238, 216, .22) 0, rgba(255, 238, 216, 0) 44%),
+        radial-gradient(circle at 28% 24%, rgba(10, 4, 2, 0) 54%, rgba(10, 4, 2, .40) 80%, rgba(5, 2, 1, .86) 100%),
+        radial-gradient(closest-side, rgba(50, 20, 8, 0) 70%, rgba(50, 20, 8, .30) 92%, rgba(255, 176, 130, .42) 98.6%, rgba(255, 200, 160, .0) 100%); }
+
+/* Cielo animado de la vista de globo (js/espacio.js): detrás del mapa, sobre las nebulosas. */
+#space-fx { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; opacity: 0; transition: opacity 600ms ease; }
+#space-fx.visible { opacity: 1; }

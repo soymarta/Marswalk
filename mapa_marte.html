@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapa de Marte</title>
+    <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css" rel="stylesheet" />
+    <script src="https://unpkg.com/maplibre-contour@0.1.0/dist/index.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="css/ruta.css">
+    <link rel="stylesheet" href="css/astronauta.css">
+    <link rel="stylesheet" href="css/panorama.css">
+</head>
+<body>
+<div id="space-background" aria-hidden="true"></div>
+<div id="map"></div>
+
+<div class="coords collapsed" id="coords">
+    <div class="coords-header" id="coords-toggle">
+        <span>LECTURA EN CURSOR</span>
+        <span id="coords-icon">▼</span>
+    </div>
+    <div class="coords-content" id="coords-content">
+        <label style="font-size:11px; margin-bottom:6px; display:flex; align-items:center; gap:4px; cursor:pointer; color:#ffcc88;">
+            <input type="checkbox" id="toggle-show-all"> Ver todas las variables
+        </label>
+        <div class="rd-row" id="row-latlon">Lon: <span id="rd-lon">---</span>°  Lat: <span id="rd-lat">---</span>°</div>
+        <div class="rd-row" id="row-temp">Temp: <span id="rd-temp">---</span> °C</div>
+        <div class="rd-row" id="row-press">Pres: <span id="rd-press">---</span> Pa</div>
+        <div class="rd-row" id="row-wind">Viento: <span id="rd-wind">---</span> m/s  Dir: <span id="rd-wdir">---</span>°</div>
+        <div class="rd-row" id="row-geopot">Geopotencial: <span id="rd-geopot">---</span> m²/s²</div>
+        <div class="rd-row" id="row-dust">Polvo: τ=<span id="rd-dust">---</span></div>
+    </div>
+</div>
+
+<div class="controls" id="controls-panel">
+    <div class="controls-header" id="controls-toggle">
+        <span>CAPAS</span>
+        <span id="controls-icon">▼</span>
+    </div>
+    <div class="controls-content">
+        <div class="title">Vista</div>
+        <label><input type="checkbox" id="toggle-globe" checked> Globo 3D (arrastra para girar)</label>
+
+        <div class="title">Topografía</div>
+        <label><input type="checkbox" id="toggle-color" checked> <span id="label-toggle-color">Color topográfico</span></label>
+        <label><input type="checkbox" id="toggle-hillshade" checked> Sombreado (relieve)</label>
+        <label><input type="checkbox" id="toggle-contours" checked> Curvas de nivel</label>
+        <label><input type="checkbox" id="toggle-labels" checked> Etiquetas de elevación</label>
+
+        <div class="title" style="margin-top: 8px;">Marcadores</div>
+        <label><input type="checkbox" id="toggle-poi"> Puntos de interés</label>
+        <label><input type="checkbox" id="toggle-names" checked> Nombres de lugares</label>
+
+        <div class="title" style="margin-top: 8px;">Ambientales</div>
+        <label><input type="checkbox" id="toggle-temp"> Temperatura (°C)</label>
+        <label><input type="checkbox" id="toggle-wind"> Viento</label>
+        <label><input type="checkbox" id="toggle-wind-animated"> Animación de viento</label>
+        <label><input type="checkbox" id="toggle-pressure"> Presión</label>
+        <label><input type="checkbox" id="toggle-dust"> Polvo</label>
+        <label><input type="checkbox" id="toggle-geopotential"> Geopotencial (m²/s²)</label>
+    </div>
+</div>
+
+<div class="info" id="info-panel">
+    <strong>Mapa Topográfico de Marte</strong><br>
+    <span id="info-color-layer">MOLA DEM 463 m</span> — arrastra y usa la rueda para hacer zoom
+</div>
+
+<div class="legend" id="legend">
+    <div class="legend-title" id="legend-title">Elevación</div>
+    <div id="legend-items"></div>
+</div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

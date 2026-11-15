@@ -1,0 +1,32 @@
+{
+ "fuente": "USGS Mars 2020 TRN HiRISE orthoMosaic 25 cm (JEZ_hirise_soc_006), teselado a ~0,6 m; tinte marciano sobre escala de grises",
+ "url": "tiles/jezero_hirise/{z}/{x}/{y}.webp",
+ "zoom_min": 15,
+ "zoom_max": 17,
+ "bounds": [
+  77.36024292991164,
+  18.424117635869905,
+  77.45932399224334,
+  18.490992713527472
+ ],
+ "rangos": {
+  "15": [
+   23425,
+   14670,
+   23434,
+   14677
+  ],
+  "16": [
+   46851,
+   29341,
+   46869,
+   29354
+  ],
+  "17": [
+   93702,
+   58683,
+   93738,
+   58709
+  ]
+ }
+}

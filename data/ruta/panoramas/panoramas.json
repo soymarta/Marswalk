@@ -1,0 +1,94 @@
+{
+ "credito": "Panorámica oficial de Mastcam-Z: NASA/JPL-Caltech/ASU/MSSS. Cita: Bell et al., LPSC 2025, #1719. Elevación estimada a partir del horizonte",
+ "paradas": {
+  "three-forks": "three-forks",
+  "wildcat-ridge": "wildcat-ridge"
+ },
+ "miradores": {
+  "wildcat-ridge": {
+   "oficial": true,
+   "archivo": "oficial-wildcat-ridge.jpg",
+   "titulo": "Panorámica 360° n.º 20 «Wildcat Ridge»",
+   "nombre": "Panorámica 360° n.º 20 «Wildcat Ridge»",
+   "soles": [
+    518,
+    534
+   ],
+   "camara": "Mastcam-Z",
+   "credito": "Panorámica oficial de Mastcam-Z: NASA/JPL-Caltech/ASU/MSSS. Cita: Bell et al., LPSC 2025, #1719. Elevación estimada a partir del horizonte",
+   "fuente": "https://mastcamz.asu.edu/mastcam-zs-360-panorama-collection/",
+   "nota": "Las zonas negras son la cubierta del rover enmascarada por el equipo de Mastcam-Z.",
+   "haov": 360,
+   "vaov": 114.99,
+   "vOffset": -32.5,
+   "anchoOriginalPx": 29897,
+   "altoOriginalPx": 9550,
+   "objetos": [
+    {
+     "id": "roca-wildcat-ridge",
+     "nombre": "Roca Wildcat Ridge (parche de abrasión y dos taladros)",
+     "que": "Roca de aproximadamente 1 m que probablemente se formó hace miles de millones de años cuando lodo y arena fina se depositaron en un lago salado que se evaporaba.",
+     "minerales": "SHERLOC detectó moléculas orgánicas correlacionadas espacialmente con minerales de sulfato; según el equipo de Mastcam-Z, PIXL y SHERLOC indican material de sulfato y moléculas orgánicas simples en una roca de grano muy fino.",
+     "muestras": "Testigos Hazeltop (sol 509) y Bearwallow (sol 516); parche de abrasión Berry Hollow.",
+     "porque": "Son las detecciones orgánicas más abundantes de la misión hasta 2022, en un ambiente donde la vida podría haber prosperado. Las moléculas orgánicas no son prueba de vida.",
+     "fuentes": [
+      "https://www.jpl.nasa.gov/news/nasas-perseverance-rover-investigates-geologically-rich-mars-terrain/",
+      "https://science.nasa.gov/mission/mars-2020-perseverance/mars-rock-samples/",
+      "https://mastcamz.asu.edu/sample-cores-part-2-the-delta-edition/"
+     ],
+     "precision": "Posición localizada a ojo en la panorámica (parche y taladros visibles); pendiente de revisión de Ciencia.",
+     "yaw": -101.23,
+     "pitch": -54.24
+    }
+   ],
+   "lon": 77.40592,
+   "lat": 18.45865,
+   "nombreCorto": "Wildcat Ridge"
+  },
+  "three-forks": {
+   "oficial": true,
+   "archivo": "oficial-three-forks.jpg",
+   "titulo": "Panorámica 360° n.º 23 «Three Forks Sample Depot #1»",
+   "nombre": "Panorámica 360° n.º 23 «Three Forks Sample Depot #1»",
+   "soles": [
+    670
+   ],
+   "camara": "Mastcam-Z",
+   "credito": "Panorámica oficial de Mastcam-Z: NASA/JPL-Caltech/ASU/MSSS. Cita: Bell et al., LPSC 2025, #1719. Elevación estimada a partir del horizonte",
+   "fuente": "https://mastcamz.asu.edu/mastcam-zs-360-panorama-collection/",
+   "nota": "Las zonas negras son la cubierta del rover enmascarada por el equipo de Mastcam-Z.",
+   "haov": 360,
+   "vaov": 88.0,
+   "vOffset": -31.0,
+   "anchoOriginalPx": 29573,
+   "altoOriginalPx": 7229,
+   "objetos": [],
+   "lon": 77.40824,
+   "lat": 18.45281,
+   "nombreCorto": "Three Forks"
+  },
+  "rockytop": {
+   "oficial": true,
+   "archivo": "oficial-rockytop.jpg",
+   "titulo": "Panorámica 360° n.º 18 «Rockytop Scarp» (frente del delta)",
+   "nombre": "Panorámica 360° n.º 18 «Rockytop Scarp» (frente del delta)",
+   "soles": [
+    466,
+    474
+   ],
+   "camara": "Mastcam-Z",
+   "credito": "Panorámica oficial de Mastcam-Z: NASA/JPL-Caltech/ASU/MSSS. Cita: Bell et al., LPSC 2025, #1719. Elevación estimada a partir del horizonte",
+   "fuente": "https://mastcamz.asu.edu/mastcam-zs-360-panorama-collection/",
+   "nota": "Las zonas negras son la cubierta del rover enmascarada por el equipo de Mastcam-Z.",
+   "haov": 360,
+   "vaov": 101.0,
+   "vOffset": -25.5,
+   "anchoOriginalPx": 46880,
+   "altoOriginalPx": 13152,
+   "objetos": [],
+   "lon": 77.40601,
+   "lat": 18.45879,
+   "nombreCorto": "Rockytop"
+  }
+ }
+}

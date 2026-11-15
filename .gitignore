@@ -1,0 +1,33 @@
+# Entorno de Python
+venv-marte/
+__pycache__/
+*.pyc
+
+# Descargas en bruto e intermedios (se regeneran con los scripts de python/)
+data/raw/
+*.tif
+!data/terreno/*.tif
+*.part
+
+# DEM original de MOLA e intermedios del Makefile
+Mars_MGS_MOLA_DEM_mosaic_global_463m.tif
+mola_dem_*.tif
+
+# Viking colorized mosaic 232m y su intermedio Web Mercator (12,7 GB + ~1 GB)
+Mars_Viking_MDIM21_ClrMosaic_global_232m.tif
+viking_webmercator.tif
+
+# Teselas del mosaico Viking (se regeneran con `make viking-tiles`)
+tiles/viking_xyz/
+
+# Prototipo local (descargas de prueba, no se versiona)
+data/viking_prototype/
+
+# Sistema / editores
+.DS_Store
+*.swp
+.vscode/
+.idea/
+
+# agentchat (estado local del vigilante de la skill team-work)
+.agentchat/

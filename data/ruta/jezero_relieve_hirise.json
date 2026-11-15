@@ -1,0 +1,33 @@
+{
+ "fuente": "USGS Mars 2020 TRN HiRISE DTM 1 m (JEZ_hirise_soc_006), teselado a ~1,2 m y fundido con el DTM CTX de 20 m en el borde",
+ "url": "tiles/jezero_relieve_hirise/{z}/{x}/{y}.png",
+ "codificacion": "mapbox (-10000 + v*0.1)",
+ "zoom_min": 14,
+ "zoom_max": 16,
+ "bounds": [
+  77.36024292991164,
+  18.42413450647476,
+  77.45932399224334,
+  18.49100958413233
+ ],
+ "rangos": {
+  "14": [
+   11712,
+   7335,
+   11717,
+   7338
+  ],
+  "15": [
+   23425,
+   14670,
+   23434,
+   14677
+  ],
+  "16": [
+   46851,
+   29341,
+   46869,
+   29354
+  ]
+ }
+}
